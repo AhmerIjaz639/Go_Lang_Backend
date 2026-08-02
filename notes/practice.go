@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+/*
 func divide(a, b int) (int, error) {
 	if b == 0 {
 		return 0, fmt.Errorf("division by zero is not allowed")
@@ -16,4 +17,30 @@ func main() {
 	}
 
 	println("Result:", result)
+}
+
+*/
+
+func minMax(numbers []int) (min, max int) {
+	min = numbers[0]
+	max = numbers[0]
+
+	for _, n := range numbers {
+		if n < min {
+			min = n
+		}
+		if n > max {
+			max = n
+		}
+
+	}
+
+	return
+}
+
+func main() {
+	numbers := []int{3, 5, 1, 8, 2}
+	min, max := minMax(numbers)
+	fmt.Printf("Min: %d, Max: %d\n", min, max)
+
 }
