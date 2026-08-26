@@ -38,9 +38,24 @@ func minMax(numbers []int) (min, max int) {
 	return
 }
 
+func sum(nums ...int) int {
+	total := 0
+	for _, n := range nums {
+		total += n
+
+	}
+	return total
+}
+
 func main() {
-	numbers := []int{3, 5, 1, 8, 2}
+	/*numbers := []int{3, 5, 1, 8, 2}
 	min, max := minMax(numbers)
 	fmt.Printf("Min: %d, Max: %d\n", min, max)
+	*/
+    numbers := []int{3, 5, 1, 8, 2}
+
+	fmt.Println("sum; ", sum(numbers...))
+
+	fmt.Println("Sum:", sum(1, 2, 3, 4, 5))
 
 }
